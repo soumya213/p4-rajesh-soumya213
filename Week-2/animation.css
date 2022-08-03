@@ -1,0 +1,89 @@
+body{
+    margin: 0;
+}
+
+  .smallcontainer {
+    width: 208px;
+    height: 100px;
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+
+  div,h4{
+    margin: 0;
+  }
+
+  .block-1 {
+    height: 100px;
+    width: 100px;
+    background: #d44545;
+    float: left;
+    margin-left: 2px;
+    border: 1px solid #ccc;
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-direction: alternate;
+  }
+
+  .block-2 {
+    height: 100px;
+    width: 100px;
+    background: #ddec09;
+    float: left;
+    margin-left: 2px;
+    border: 1px solid #ccc;
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-direction: alternate;
+  }
+
+  .block-3 {
+    height: 100px;
+    width: 100px;
+    background: #0c35eb;
+    float: left;
+    margin-left: 2px;
+    border: 1px solid #ccc;
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-direction: alternate;
+  }
+
+  .block-4 {
+    height: 100px;
+    width: 100px;
+    background: #0def64;
+    float: left;
+    margin-left: 2px;
+    border: 1px solid #ccc;
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-direction: alternate;
+  }
+
+  .notVisible{
+    display: none;
+}
+
+.smallcontainer:hover .block-1{
+    transform: translateX(-100px) rotate(90deg);
+}
+
+.smallcontainer:hover .block-2{
+    transform: translateX(100px) rotateZ(-90deg) ;
+}
+
+.smallcontainer:hover .block-3{
+    transform: translateX(-100px) rotate(-90deg);
+}
+
+.smallcontainer:hover .block-4{
+    transform: translateX(100px) rotate(90deg);
+}
+
+.smallcontainer:hover .notVisible{
+    display: block;
+    padding-left: 100px;
+    height: 20px;
+    width: 20px;
+}
