@@ -3,8 +3,8 @@ console.log('This is assignment 2');
 
 console.log('------------Bind------------');
 
-a=10 //Global variable 
-b=10 //Global variable 
+const a=10 //Global variable 
+const b=10 //Global variable 
 
 // Bind
 function multiply(a,b) {
@@ -32,15 +32,20 @@ Bind method creates a new method from the method it is binded and nullifies the 
 console.log('------------Call------------');
 
 function pesto(additionalInformation) {
-    console.log(`${this.name} have completed assignment ${this.value} ${additionalInformation}.`);
+    if (additionalInformation) {
+        console.log(`${this.name} have completed assignment ${this.value} ${additionalInformation}.`);
+    }
+    else{
+    console.log(`${this.name} have completed assignment ${this.value}.`);
+    }
 }
 
-soumya={
+let soumya={
     name:'Soumya',
     value:3
 }
 
-vijay={
+let vijay={
     name:'Vijay',
     value:2
 }
@@ -57,7 +62,12 @@ Call invokes the method and allows you to pass in arguments one by one. The call
 console.log('------------Apply------------');
 
 function pestoApplyfunction(additionalInformation) {
-    console.log(`${this.name} have completed assignment ${this.value} ${additionalInformation}.`);
+    if (additionalInformation) {
+        console.log(`${this.name} have completed assignment ${this.value} ${additionalInformation}.`);
+    }
+    else{
+    console.log(`${this.name} have completed assignment ${this.value}.`);
+    }
 }
 
 pestoApplyfunction.apply(soumya,['also rest of the assignments'])
@@ -68,4 +78,3 @@ Apply invokes the function and allows you to pass in arguments as an array.
 
 Call and Apply are similar but the diffence is the way arguments are passed to the fucntion
 */
-
