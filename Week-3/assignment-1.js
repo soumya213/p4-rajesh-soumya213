@@ -39,7 +39,3 @@ time(()=> memoizeAdd(100,100))
 time(()=> memoizeAdd(100))
 time(()=> memoizeAdd(100,200))
 time(()=> memoizeAdd(100,100))
-
-// https://github.com/soumya213/p4-rajesh-soumya213/pull/3
-
-// Why add function called for the 4th function
