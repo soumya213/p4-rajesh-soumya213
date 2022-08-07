@@ -22,6 +22,7 @@ log();
 
 // Explanation of the function
 
-// Here the increment function is called thrice, so the count will be incremnted by 3 and finally the count value will be 3.
-
-// But the console.log value will be 0 because variable `message` is a not incremented and assigned a value of 0 at the start.
+/*
+The increment function is called thrice, so the count will be incremnted by 3 and finally the count value will be 3.
+But the console.log value for message is initialised only once during parent function call and its not getting reset, hence the value is 0.
+*/
