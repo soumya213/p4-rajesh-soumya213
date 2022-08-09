@@ -7,24 +7,34 @@ const a=10 //Global variable
 const b=10 //Global variable 
 
 // Bind
-function multiply(a,b) {
 
-    return this.a * this.b;
+let name1={
+    name:'Soumya',
+    title:'Dhar',
     
+    works: function (workplace) {
+        console.log(this.name + ' ' + this.title + ' is working ' + workplace);
+    }
 }
 
-var multiplyB = multiply.bind({a:2,b:3})
+let name2={
+    name:'Sthiti',
+    title:'Nath',
+}
 
-console.log(multiply(6,7)); //100
-console.log(multiplyB()); //6
-console.log(multiplyB(3,4)); //6
+let name3={
+    name:'Abhsekh',
+    title:'Panigrahi',
+}
 
-/* 
-Bind method creates a new method from the method it is binded and nullifies the this keyword functionality
- If we are not using Bind then the this keyword will take the global variable if availble and return undefined/NAN if there is no global variables. 
- Bind restrict the values to the provided one. In function-1 multiply(6,7) the global values will be taken.
+workPlace= name1.works.bind(name2,'tcs')
+workPlace()
 
- Once binded the values are resricted to the ones provided. multiplyB will alwasys give 6 as output. 
+workPlace= name1.works.bind(name3,'pwc')
+workPlace()
+
+/*
+ bind() method doesn’t immediately execute the function. It just returns a new version of the function whose this sets to thisArg argument. 
 */
 
 // Call
@@ -78,3 +88,4 @@ Apply invokes the function and allows you to pass in arguments as an array.
 
 Call and Apply are similar but the diffence is the way arguments are passed to the fucntion
 */
+
